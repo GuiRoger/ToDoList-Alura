@@ -1,11 +1,22 @@
-import React, { ButtonHTMLAttributes } from 'react';
+import React from 'react';
+import styled from 'styled-components';
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  text:string;  
-  id:string;
-} 
 
-const Button : React.FC<ButtonProps> = ({text,onChange,id,type}) => {
-  return <button type={type} onChange={onChange} id={id}>{text}</button>
+function Button() {
+  const BotaoEstilizado = styled.button`align-self: center;
+  background-color: #88bcd1;
+  border-radius: 10px;
+  box-shadow: 2px 4px 4px #0000009F;
+  color: #272626;
+  cursor: pointer;
+  font-size: 1.25rem;
+  padding: 16px;
+  width: 150px;
+  
+  &:active {
+    background-color: #7CA6B7;
+    box-shadow: 2px 2px 4px #0000009F inset;
+  }`;
+  return <BotaoEstilizado >Enviar</BotaoEstilizado>;
 }
 export default Button;
