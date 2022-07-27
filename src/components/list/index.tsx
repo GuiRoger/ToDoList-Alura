@@ -1,8 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
-
-import { StyledComponent} from 'styled-components';
-import {ListaStyledComponent,ItemStyledComponent} from './list';
+import {ItemStyledComponent, ListComponentStyle} from './list';
 
 export default function List() {
 
@@ -11,8 +8,9 @@ export default function List() {
     { name: 'React', tempo: '02:00:00' },
     { name: 'JavaScript', tempo: '01:01:00' }
   ]
+  
   return (
-    <ListaStyledComponent>
+    <ListComponentStyle>
       <h2>Estudos do dia</h2>
       <ul>
         
@@ -23,6 +21,6 @@ export default function List() {
           </ItemStyledComponent>        
         ))}
       </ul>
-    </ListaStyledComponent>
+    </ListComponentStyle>
   )
 }
