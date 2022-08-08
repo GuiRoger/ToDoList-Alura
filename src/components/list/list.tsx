@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import React from 'react';
 
 //Encapsular Lis nos componentes criados caso seja concluido ou completo
 
@@ -32,8 +33,8 @@ export const  ListComponentStyle = styled.aside`
 `;
 
 
-
-export const ItemStyledComponent = styled.li`
+//Estilos da List Item
+ const ItemStyledComponent = styled.li`
   background-color: #4D4D4D;
   border-radius: 8px;
   box-shadow: 2px 4px 4px #0000009F;
@@ -55,6 +56,19 @@ export const ItemStyledComponent = styled.li`
     font-size: 1.8rem;
   }
 `;
+interface Li {
+  Tempo:string;
+  Titulo:string;
+  Key:number;
+}
+//Component da minha List Item
+ const LiComponent : React.FC<Li> = ({ Titulo,Tempo,Key})=>{
+  return (<ItemStyledComponent key={Key}>  
+    <h3>{Titulo}</h3>
+  <span>{Tempo}</span>
+  </ItemStyledComponent>);
+};
+export default LiComponent;
 
 export const SelectedItem = styled.li`
   background-color: #292929;

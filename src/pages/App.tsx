@@ -2,6 +2,7 @@ import React from 'react';
 
 import Form from '../components/form/index';
 import List from '../components/list/index';
+import StopWatch from '../components/stopwatch/stopwatch';
 import AppStyled from './styles';
 
 function App() {   
@@ -10,6 +11,7 @@ function App() {
     <AppStyled>
       <Form/>
       <List/>
+      <StopWatch time={''}/>
     </AppStyled>
   );
 }

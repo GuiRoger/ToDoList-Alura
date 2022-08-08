@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+
 export const ButtonComponentStyle = styled.button`align-self: center;
 background-color: #88bcd1;
 border-radius: 10px;

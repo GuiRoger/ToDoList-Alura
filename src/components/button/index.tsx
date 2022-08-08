@@ -1,10 +1,14 @@
 import React from 'react';
 
 import { ButtonComponentStyle } from './stylesButton';
+interface ButtonModel
+{
+  text:string
+}
 
-
-function Button() {
+const Button :React.FC<ButtonModel> =({text}) =>
+{
  
-  return <ButtonComponentStyle >Enviar</ButtonComponentStyle>;
+  return <ButtonComponentStyle >{text}</ButtonComponentStyle>;
 }
 export default Button;
