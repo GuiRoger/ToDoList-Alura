@@ -18,6 +18,7 @@ function Form ({AddTaskToList}:{AddTaskToList:React.Dispatch<React.SetStateActio
   function AddTask(event:React.FormEvent<HTMLFormElement>){
     event.preventDefault();
     AddTaskToList(OldTasks=> [...OldTasks,{...task}]);
+    setTask({Name:"",RunTime:"00:00:00"});
     console.log('state: ',task)
   }
 
